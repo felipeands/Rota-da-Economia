@@ -1,0 +1,441 @@
+body {
+	background-color: #2C8AFA;
+	margin-top: 0;
+	font-family: Arial;
+	color: #999;
+	font-size: 12px;
+}
+
+a { 
+	text-decoration: none;
+	color: #999;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	margin: 0;
+}
+h1 a{
+	display: block;
+	margin-bottom: 20px;
+}
+.destaq {
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#site {
+	background-color: white;
+	padding: 30px 0px 40px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+MENU LATERAL
+*/
+nav#menu {
+	margin: 0 -10px 0 -10px;
+}
+	nav#menu a{ 
+		display: block;
+		padding: 3px 0;
+	}
+	nav#menu category {
+		display: block;
+		overflow: auto;
+	}
+		nav#menu category.root.expanded {
+			background-color: #2C8AFA;
+			border-radius: 0 5px 5px 0;
+		}
+			nav#menu category.root.expanded a { color: #FFF; }
+
+			nav#menu category.root.expanded category {
+				display: block;
+				background-color: #ABDAFF;
+			}
+			nav#menu category.root.expanded category a{ 
+				color: #2C8AFA; 
+				padding-left: 30px;
+			}
+
+		nav#menu category category {
+			display: none;
+		}
+		nav#menu category icon {
+			display: block;
+			float: left;
+			margin: 5px 10px 0px 10px;
+			height: 9px;
+			width: 9px;
+			cursor: pointer;
+			background: url(../img/css/sprite1.png) no-repeat;
+		}
+			nav#menu category.expanded icon {
+				background-position: 0 -10px;
+			}
+/*
+end MENU LATERAL
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.col1 .ads {
+	background-color: cyan;
+}
+
+header {
+	/*background-color: yellow;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
+	SEARCH
+	*/
+	#search {
+		margin: 0 0 10px 0;
+		padding: 3px;
+		border: 1px solid #2C8AFA;
+		border-radius: 5px;
+	}
+		#search .value {
+			margin: 0 2px;
+			width: 192px;
+			border: none;
+		}
+		#search .ok {
+			background: url(../img/css/sprite1.png) no-repeat;
+			background-position: 0 -20px;
+			width: 17px;
+			height: 17px;
+			border: none;
+			cursor: pointer;
+		}
+	/* 
+	END SEARCH
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*	
+MINHAS LISTAS
+*/
+	#my_lists {
+		margin-top: 5px;
+		color: #2C8AFA;
+	}
+		#my_lists a {
+			font-size: 14px;
+			font-weight: bold;
+			color: #2C8AFA;
+		}
+/*
+END MINHAS LISTAS
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ACCOUNT
+*/
+	#account {
+		text-align: right;
+		margin-right: 0;
+	}
+/*
+END ACCOUNT
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+CURRENT CART
+*/
+#current_cart {
+	background-color: #2C8AFA;
+	height: 110px;
+}
+	#current_cart .compare {
+		background-color: #E45572;
+		color: white;
+		font-weight: bold;
+		font-size: 14px;
+		text-align: center;
+		padding: 10px 0;
+		margin-top: 40px;
+	}
+	#current_cart .total {
+		background-color: gray;
+		background: url(../img/css/bg-cart.png) no-repeat center center;
+		color: white;
+		height: 110px;
+	}
+		#current_cart .value {
+			margin: 30px 0 5px;
+			text-align: center;
+		}
+		#current_cart .total .real {
+			font-weight: bold;
+			font-size: 50px;
+		}
+
+	#current_cart .items {
+		list-style: none;
+		padding: 3px;
+		margin: 5px 0 0 10px;
+	}
+		#current_cart .items a {
+			color: white;
+		}
+		#current_cart .items li {
+			margin-bottom: 2px;
+		}
+		#current_cart .items .del {
+			width: 9px;
+			height: 15px;
+			background-color: #E45572;
+			color: white;
+			cursor: pointer;
+			border: none;
+			vertical-align: middle;
+		}
+		#current_cart .items .qtd {
+			width: 22px;
+			height: 10px;
+			text-align: right;
+		}
+	#current_cart .expand {
+		padding: 0 3px;
+		background-color: #ABDAFF;
+		color: #ABDAFF;
+		display: block;
+	}
+/*
+CURRENT CART
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#lists {
+	display: none;
+	background-color: green;
+}
+	#lists .items { 
+		background-color: yellow;
+	}
+	#lists .photo { 
+		background-color: red;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#result .breadcrumb {
+	color:  #E45572;
+}
+	#result .breadcrumb a {
+		color: #2C8AFA;
+	}
+	#result table {
+		border: none;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pager {
+	background-color: pink;
+}
+.expand {
+	background-color: black;
+}
