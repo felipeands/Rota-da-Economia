@@ -22,18 +22,17 @@
 			<div class="col1 principal grid_4">
 
 				<nav id="menu">
-
+					
+						<?php foreach($secoes AS $secao){ ?>
+						
 						<category class="root">
 							<icon></icon>
-							<a href="#" class="category">bazar</a>
+							<a href="<?php echo base_url("secao/{$secao->slug}"); ?>" class="category"><?php echo $secao->nome; ?></a>
 						</category>
+						
+						<?php } ?>
 
-						<category class="root">
-							<icon></icon>
-							<a href="#" class="category">bebidas</a>
-						</category>
-
-						<category class="root expanded">
+						<!--<category class="root expanded">
 							<icon></icon>
 							<a href="#" class="category">cafés</a>
 
@@ -44,12 +43,7 @@
 								<a href="#" class="category">grãos</a>
 							</category>
 
-						</category>
-
-						<category class="root">
-							<icon></icon>
-							<a href="#" class="category">carnes</a>
-						</category>
+						</category>-->
 
 				</nav>
 				<!-- end #menu -->
@@ -114,7 +108,7 @@
 						<li>
 
 							<button class="del">x</button>
-							<input class="qtd" type="text" name="qtd" value="1" maxlength="3"/>
+							<input class="qtd" type="number" name="qtd" value="1" min="1" maxlength="2" max="99"/>
 							<a class="add" href="javascript:void(0);"></a>
 
 							<a class="title" href="#">Mortadela fatiada Sadia</a>
@@ -171,10 +165,10 @@
 					</div>
 					<!-- end .breadcrumb -->
 
-					<div class="total"><span class="destaq">22</span> produtos encontrados</div>
+					<div class="total"><span class="featured">22</span> produtos encontrados</div>
 
-					<div class="grid_21">
-						<table border="1" width="100%" id="grid">
+					<div>
+						<table class="products" border="0" width="100%" cellspacing="0" cellpadding="4" id="grid">
 							<thead>
 								<tr>
 									<td colspan="2">Produto</td>
@@ -193,8 +187,8 @@
 							</tfoot>
 							<tbody>
 								<tr>
-									<td>foto</td>
-									<td>titulo</td>
+									<td class="pic">foto</td>
+									<td class="title">titulo</td>
 									<td>preço</td>
 									<td>qtd</td>
 									<td>carrinho</td>
@@ -208,7 +202,7 @@
 					<!-- end #grid -->
 
 					<div id="pager">
-						<div class="grid_9 push_7">
+						<div class="grid_7 push_7">
 							<div>Exibindo <span class="destaq">8</span> a <span class="destaq">18</span>, de <span class="destaq">22</span> produtos encontrados</div>
 							<div>Página <span class="destaq">2</span> de <span class="destaq">3</span></div>
 							<a href="#">≤ Página anterior</a> • <a href="#">Próxima página ≥</a>

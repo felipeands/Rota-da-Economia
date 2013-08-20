@@ -10,22 +10,17 @@ class Home extends CI_Controller {
 		
 		// Load the necessary stuff...
 		$this->load->helper(array('language', 'url', 'form', 'account/ssl'));
-        $this->load->library(array('account/authentication'));
+		$this->load->library(array('account/authentication'));
 		$this->load->model(array('account/account_model'));
 		$this->lang->load(array('general'));
 	}
 	
 	function index(){
-
-		// print_r($this->config);
 		
-		//testando Datamapper com tabela produto
-		$p = new Produto();
-		$p->like('nome','coca');
-		$p->get();
-
-		// foreach($p as $obj)
-		// 	echo $obj->nome;
+		//defaults
+		$this->load->model('secao','secao_model');
+		$this->data['secoes']	= $this->secao_model->getAllRecursive();
+		$this->data['secoes_filtro']	= $this->secao_model->getByNode(0);
 		
 		maintain_ssl();
 		

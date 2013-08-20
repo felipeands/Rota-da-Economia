@@ -21,7 +21,7 @@ h1 a{
 	display: block;
 	margin-bottom: 20px;
 }
-.destaq {
+.featured {
 	font-weight: bold;
 }
 
@@ -336,17 +336,16 @@ CURRENT CART
 			margin-bottom: 2px;
 		}
 		#current_cart .items .del {
-			width: 9px;
-			height: 15px;
 			background-color: #E45572;
 			color: white;
 			cursor: pointer;
 			border: none;
-			vertical-align: middle;
+			text-align: center;
+			padding: 1px 5px;
 		}
 		#current_cart .items .qtd {
-			width: 22px;
-			height: 10px;
+			width: 27px;
+			height: 13px;
 			text-align: right;
 		}
 	#current_cart .expand {
@@ -414,8 +413,20 @@ CURRENT CART
 	#result table {
 		border: none;
 	}
-
-
+	#result .products thead,
+	#result .products tfoot {
+		background: #9DC8F8;
+		color: black;
+	}
+	#result .products tfoot {
+		display: none;
+	}
+	#result .products tbody .pic {
+		width: 70px;
+	}
+	#result .products tbody .title {
+		width: 530px;
+	}
 
 
 
@@ -434,7 +445,14 @@ CURRENT CART
 
 
 #pager {
-	background-color: pink;
+	background-color: #9DC8F8;
+	color: black;
+}
+#pager a {
+	color: black;
+}
+#pager > div {
+	text-align: center;
 }
 .expand {
 	background-color: black;
